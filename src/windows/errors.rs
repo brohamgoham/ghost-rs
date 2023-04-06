@@ -4,13 +4,14 @@ use std::{
     fmt::{Display, Formatter}
 };
 use windows::Win32::Foundation::HANDLE;
+
 #[derive(Debug)]
 pub enum GhostError {
     CouldNotGetModuleName,
     CouldNotAcquireHandle,
     CouldNotRenameToStream,
     CouldNotDisposeFile,
-    CouldNotCloseHandle(Handle),
+    CouldNotCloseHandle(HANDLE),
     UnsupportedPlatform
 }
 
