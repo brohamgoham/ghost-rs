@@ -2,7 +2,7 @@
 name = "ghost-rs"
 authors = ["Maali<mohamgoham@gmail.com>"]
 description = "Lightweight crate that allows you to stealthily remove EXE"
-version = "0.1.0"
+version = "0.1.1"
 homepage = "https://github.com/brohamgoham/ghost-rs"
 documentation = "https://docs.rs/ghost-rs"
 readme = "README.md"
