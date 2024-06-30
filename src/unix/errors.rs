@@ -7,6 +7,7 @@ pub enum GhostError {
     CouldNotGetExe(String),
     CouldNotUnlinkExe(String),
     UnsupportedPlatform,
+    CouldNotFindFile(String)
 }
 
 impl Error for GhostError {}
@@ -22,6 +23,9 @@ impl fmt::Display for GhostError {
             GhostError::UnsupportedPlatform => write!(f, "UNSUPPORTED ON THIS PLATFORM"),
             GhostError::CouldNotGetExe(error) => {
                 write!(f, "FAILED TO GET EXE PATH ERROR: {}", error)
+            },
+            GhostError::CouldNotFindFile(error) => {
+                write!(f, "Could not find file to dispose: {}", error)
             },
             GhostError::CouldNotUnlinkExe(error) => write!(f, "FAILED TO UNLINK THE CURRENT EXE FOR CURRENT PROCESS: {}", error),
         }
