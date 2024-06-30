@@ -37,6 +37,7 @@ pub enum GhostError {
     CouldNotRenameToStream,
     CouldNotDisposeFile,
     CouldNotCloseHandle(HANDLE),
+    CouldNotFindFile,
 }
 
 impl fmt::Display for GhostError {
@@ -46,6 +47,7 @@ impl fmt::Display for GhostError {
             GhostError::CouldNotAcquireHandle => write!(f, "failed to acquire handle for the current process"),
             GhostError::CouldNotRenameToStream => write!(f, "failed to rename to stream"),
             GhostError::CouldNotDisposeFile => write!(f, "could not disposed, failure"),
+            GhostError::CouldNotFindFile => write!(f, "could not find file to remove"),
             GhostError::CouldNotCloseHandle(handle) => {
                 write!(f, "could not close handle: {:?}", handle)
             },

@@ -1,6 +1,6 @@
 //! `Ghost` is a library that can delete exe files on the fly
-//! 
-//! Windows implementation heavily refrences [@bytebl33der] NIM 
+//! Credits to @yamakadi(YK) https://github.com/yamakadi who I was heavily inspired by to publish this
+//! This implementation heavily refrences [@bytebl33der] NIM 
 //! implementation in OffensiveNim
 
 

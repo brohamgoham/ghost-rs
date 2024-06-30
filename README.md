@@ -1,12 +1,12 @@
 # Ghost
-`Ghost` is a rust library that allows you to delete your executable while it's running.  
+`Ghost` is a tool for removing your executable while it's process is still running.  
 
 
 
 ## Usage
 
 ```rust
-// With a default placeholder value on windows (`svcmsrpc`)
+// On windows (`svcmsrpc`)
 use ghost;
 
 fn main() {
@@ -18,7 +18,7 @@ fn main() {
 ```
 
 ```rust
-// With a placeholder you provide
+// With placeholder 
 use ghost::ninja;
 
 fn main() {

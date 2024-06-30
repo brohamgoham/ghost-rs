@@ -11,6 +11,7 @@ pub enum GhostError {
     CouldNotAcquireHandle,
     CouldNotRenameToStream,
     CouldNotDisposeFile,
+    CouldNotFindFile,
     CouldNotCloseHandle(HANDLE),
     UnsupportedPlatform
 }
@@ -25,6 +26,7 @@ impl Display for GhostError {
             GhostError::CouldNotAcquireHandle => write!(f, "FAILED TO ACQUIRE HANDLE FOR CURRENT PROCESS"),
             GhostError::CouldNotRenameToStream => write!(f, "COULD NOT RENAME TO STREAM"),
             GhostError::CouldNotDisposeFile => write!(f, "COULD NOT DISPOSE OF FILE"),
+            GhostError::CouldNotFindFile => write!("COULD NOT FIND FILE TO DISPOSE!"),
             GhostError::CouldNotCloseHandle(handle) => {
                 write!(f, "could not close handle: {:?}", handle)
             },

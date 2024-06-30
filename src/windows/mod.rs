@@ -143,7 +143,7 @@ fn get_filename() -> Result<String, GhostError> {
     }
 
     if filename.is_empty() {
-        Err(GhostError::CouldNotGetModuleName)
+        Err(GhostError::CouldNotFindFile)
     } else {
         Ok(filename)
     }
